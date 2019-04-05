@@ -120,4 +120,46 @@ ted3.PRAssignment("How do I computer?");
 fred3.sprintChallenge('JS');
 console.log(ted3.className);
 
+class ProjectManager extends Instructor {
+  constructor(attrs) {
+    super(attrs);
+    this.gradClassName = attrs.gradClassName;
+    this.favInstructor = attrs.favInstructor;
+  }
+
+  standUp(channel) {
+    console.log(`${this.name} announces to ${channel}, @channel standy times!​​​​​`);
+  }
+
+  debugsCode(student, subject) {
+    console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
+  }
+}
+
+const fred4 = new ProjectManager({
+  name: 'Fred',
+  location: 'Bedrock',
+  age: 37,
+  gender: 'male',
+  favLanguage: 'JavaScript',
+  specialty: 'Front-end',
+  catchPhrase: `Don't forget the homies`,
+  gradClassName: 'WEB3',
+  favInstructor: 'John'
+});
+const ted4 = new ProjectManager({
+  name: 'Ted',
+  location: 'Des Moines',
+  age: 42,
+  gender: 'male',
+  favLanguage: 'Malbolge',
+  specialty: 'beating head against wall',
+  catchPhrase: `Here come Dat Boi`,
+  gradClassName: 'CS -2',
+  favInstructor: 'Harambe'
+});
+
+fred4.standUp('Coding and Stuff');
+ted4.debugsCode({ name: 'Ned'}, 'System.out.println("");');
+
 console.groupEnd();
